@@ -12,9 +12,13 @@ perception_node:
     max_snapshot_age_s: 2.0
     tracking_distance_m: 0.05
 
-    # A MESURER : zero bloque l'analyse si la forme correspondante est presente.
-    rectangle_height_m: 0.0
-    cylinder_height_m: 0.0
+    # Dimensions physiques connues, en metres.
+    cube_side_m: 0.05              # Cube rouge : 5 cm de cote.
+    rectangle_length_m: 0.08       # Pave bleu : 8 x 5 x 2,5 cm.
+    rectangle_width_m: 0.05
+    rectangle_height_m: 0.025
+    cylinder_diameter_m: 0.03      # Cylindre vert : diametre 3 cm, hauteur 6 cm.
+    cylinder_height_m: 0.06
 
     # Hypothese par defaut : camera verticale regardant les faces du dessus.
     # Normale du support vers le haut, exprimee dans le repere optique couleur.
@@ -24,10 +28,16 @@ perception_node:
     min_valid_depth_fraction: 0.5
 
     roi: [0, 0, 0, 0]  # Ou [x, y, largeur, hauteur] pour exclure la tour, par exemple.
-    min_area_px: 200.0
-    morphology_size: 3
+    min_area_px: 75.0  # Garder aussi le petit cylindre de 3 cm de diametre.
+    # Seuil effectif = max(min_area_px, min_area_fraction * surface de la ROI).
+    # Ecarter les petites taches sur les photos haute resolution ; 0 pour desactiver.
+    min_area_fraction: 0.00005
+    morphology_size: 3  # Taille a une resolution de reference 640x480.
+    scale_morphology_with_resolution: true  # Noyau de 19 pixels sur les photos 3024x4032.
+    contour_simplification_ratio: 0.0015  # Trace uniquement ; 0 pour afficher tous les details.
     min_fill_ratio: 0.7
-    min_circularity: 0.65
+    min_circularity: 0.65  # Enveloppe convexe : tolerer les contours verts irreguliers.
+    min_cylinder_solidity: 0.8  # Rejeter les formes vertes tres creuses.
     max_cube_aspect_ratio: 1.4
 
     red_hsv_low: [0, 80, 50]
@@ -36,5 +46,5 @@ perception_node:
     red_wrap_hsv_high: [179, 255, 255]
     blue_hsv_low: [95, 80, 50]
     blue_hsv_high: [135, 255, 255]
-    green_hsv_low: [35, 80, 50]
+    green_hsv_low: [35, 60, 50]  # Garder les faces vertes moins saturees sous l'eclairage.
     green_hsv_high: [85, 255, 255]

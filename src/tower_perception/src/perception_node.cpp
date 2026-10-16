@@ -25,8 +25,12 @@ PerceptionNode::PerceptionNode(const rclcpp::NodeOptions & options)
   max_age_ = startup_parameter<double>("max_snapshot_age_s", 2.0);
   tracking_distance_ = startup_parameter<double>("tracking_distance_m", 0.05);
   const double sync_tolerance = startup_parameter<double>("sync_tolerance_s", 0.05);
-  geometry_.rectangle_height = startup_parameter<double>("rectangle_height_m", 0.0);
-  geometry_.cylinder_height = startup_parameter<double>("cylinder_height_m", 0.0);
+  geometry_.cube_side = startup_parameter<double>("cube_side_m", geometry_.cube_side);
+  geometry_.rectangle_length = startup_parameter<double>("rectangle_length_m", geometry_.rectangle_length);
+  geometry_.rectangle_width = startup_parameter<double>("rectangle_width_m", geometry_.rectangle_width);
+  geometry_.rectangle_height = startup_parameter<double>("rectangle_height_m", geometry_.rectangle_height);
+  geometry_.cylinder_diameter = startup_parameter<double>("cylinder_diameter_m", geometry_.cylinder_diameter);
+  geometry_.cylinder_height = startup_parameter<double>("cylinder_height_m", geometry_.cylinder_height);
   geometry_.min_depth = startup_parameter<double>("min_depth_m", 0.1);
   geometry_.max_depth = startup_parameter<double>("max_depth_m", 3.0);
   geometry_.min_valid_depth_fraction = startup_parameter<double>("min_valid_depth_fraction", 0.5);
@@ -41,17 +45,26 @@ PerceptionNode::PerceptionNode(const rclcpp::NodeOptions & options)
     !positive(tracking_distance_) || !positive(norm) || !positive(geometry_.min_depth) ||
     !positive(geometry_.max_depth) || geometry_.max_depth <= geometry_.min_depth ||
     !positive(geometry_.min_valid_depth_fraction) || geometry_.min_valid_depth_fraction > 1.0 ||
-    !std::isfinite(geometry_.rectangle_height) || geometry_.rectangle_height < 0.0 ||
-    !std::isfinite(geometry_.cylinder_height) || geometry_.cylinder_height < 0.0)
+    !positive(geometry_.cube_side) || !positive(geometry_.rectangle_length) ||
+    !positive(geometry_.rectangle_width) || !positive(geometry_.rectangle_height) ||
+    !positive(geometry_.cylinder_diameter) || !positive(geometry_.cylinder_height))
   {
     throw std::invalid_argument("Parametre geometrique invalide : consulter config/perception.yaml.");
   }
 
-  detector_.min_area = startup_parameter<double>("min_area_px", 200.0);
+  detector_.min_area = startup_parameter<double>("min_area_px", detector_.min_area);
+  detector_.min_area_fraction = startup_parameter<double>(
+    "min_area_fraction", detector_.min_area_fraction);
   detector_.min_fill = startup_parameter<double>("min_fill_ratio", 0.7);
   detector_.min_circularity = startup_parameter<double>("min_circularity", 0.65);
+  detector_.min_cylinder_solidity = startup_parameter<double>(
+    "min_cylinder_solidity", detector_.min_cylinder_solidity);
   detector_.max_cube_aspect = startup_parameter<double>("max_cube_aspect_ratio", 1.4);
   const auto morphology = startup_parameter<int>("morphology_size", 3);
+  detector_.scale_morphology_with_resolution = startup_parameter<bool>(
+    "scale_morphology_with_resolution", detector_.scale_morphology_with_resolution);
+  detector_.contour_simplification_ratio = startup_parameter<double>(
+    "contour_simplification_ratio", detector_.contour_simplification_ratio);
   const auto roi = startup_parameter<std::vector<int64_t>>("roi", {0, 0, 0, 0});
   if (roi.size() != 4 || std::any_of(roi.begin(), roi.end(), [](int64_t v) {
       return v < 0 || v > 100000;
@@ -61,12 +74,18 @@ PerceptionNode::PerceptionNode(const rclcpp::NodeOptions & options)
   }
   detector_.roi = cv::Rect(roi[0], roi[1], roi[2], roi[3]);
   detector_.morphology_size = morphology;
-  if (!positive(detector_.min_area) || !positive(detector_.min_fill) || detector_.min_fill > 1.0 ||
+  if (!positive(detector_.min_area) || !std::isfinite(detector_.min_area_fraction) ||
+    detector_.min_area_fraction < 0.0 || detector_.min_area_fraction >= 1.0 ||
+    !positive(detector_.min_fill) || detector_.min_fill > 1.0 ||
     !positive(detector_.min_circularity) || detector_.min_circularity > 1.0 ||
+    !positive(detector_.min_cylinder_solidity) || detector_.min_cylinder_solidity > 1.0 ||
     !positive(detector_.max_cube_aspect) || detector_.max_cube_aspect < 1.0 ||
+    !std::isfinite(detector_.contour_simplification_ratio) ||
+    detector_.contour_simplification_ratio < 0.0 || detector_.contour_simplification_ratio > 0.01 ||
     morphology < 1 || morphology > 31 || morphology % 2 == 0)
   {
-    throw std::invalid_argument("Seuils de detection invalides ; noyau impair entre 1 et 31.");
+    throw std::invalid_argument(
+      "Seuils invalides : noyau impair entre 1 et 31, contour_simplification_ratio entre 0 et 0.01.");
   }
   const std::array<std::string, 4> names{{"red", "red_wrap", "blue", "green"}};
   for (std::size_t i = 0; i < names.size(); ++i) {
@@ -118,7 +137,7 @@ PerceptionNode::PerceptionNode(const rclcpp::NodeOptions & options)
       }
     });
   RCLCPP_INFO(get_logger(), "Pret : service /perception/analyze_image ou topic /perception/analyze.");
-  RCLCPP_INFO(get_logger(), "Configurer la normale du support et les hauteurs reelles avant utilisation.");
+  RCLCPP_INFO(get_logger(), "Dimensions physiques chargees ; configurer la normale du support avant utilisation.");
 }
 
 void PerceptionNode::on_images(

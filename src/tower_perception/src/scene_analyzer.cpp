@@ -70,6 +70,9 @@ SceneResult analyze_scene(
   SceneResult result;
   result.observation.header = header;
   result.debug_image = bgr.clone();
+  const double drawing_scale = std::max(1.0, std::min(bgr.cols, bgr.rows) / 480.0);
+  const int outline_thickness = std::max(2, cvRound(1.5 * drawing_scale));
+  const int text_thickness = std::max(1, cvRound(drawing_scale));
   for (const auto & detection : detect_colors(bgr, detector)) {
     cv::Mat mask = cv::Mat::zeros(depth.size(), CV_8UC1);
     cv::drawContours(mask, std::vector<std::vector<cv::Point>>{detection.contour},
@@ -137,19 +140,15 @@ SceneResult analyze_scene(
     orientation.normalize();
 
     std::unique_ptr<tower_model::Piece> piece;
+    // La forme donne les dimensions physiques connues. Le contour fournit l'orientation.
     if (detection.shape == Shape::Cube) {
-      piece = std::make_unique<tower_model::Cube>(0, (length + width) / 2.0);
+      piece = std::make_unique<tower_model::Cube>(0, geometry.cube_side);
     } else if (detection.shape == Shape::Rectangle) {
-      if (!std::isfinite(geometry.rectangle_height) || geometry.rectangle_height <= 0.0) {
-        throw std::runtime_error("Renseigner rectangle_height_m avec la hauteur reelle du pave.");
-      }
-      piece = std::make_unique<tower_model::Rectangle>(0, length, width, geometry.rectangle_height);
+      piece = std::make_unique<tower_model::Rectangle>(0,
+        geometry.rectangle_length, geometry.rectangle_width, geometry.rectangle_height);
     } else {
-      if (!std::isfinite(geometry.cylinder_height) || geometry.cylinder_height <= 0.0) {
-        throw std::runtime_error("Renseigner cylinder_height_m avec la hauteur reelle du cylindre.");
-      }
       piece = std::make_unique<tower_model::Cylindre>(
-        0, (length + width) / 4.0, geometry.cylinder_height);
+        0, geometry.cylinder_diameter / 2.0, geometry.cylinder_height);
     }
     // La profondeur mesure le dessus : le centre est une demi-hauteur plus bas.
     const auto center = top_center - normal * (piece->dimensions().hauteur / 2.0);
@@ -167,13 +166,23 @@ SceneResult analyze_scene(
 
     const cv::Scalar color = detection.shape == Shape::Cube ? cv::Scalar(0, 0, 255) :
       detection.shape == Shape::Rectangle ? cv::Scalar(255, 0, 0) : cv::Scalar(0, 255, 0);
-    cv::drawContours(result.debug_image, std::vector<std::vector<cv::Point>>{detection.contour},
-      0, color, 2);
+    // Simplifier seulement le trace : les mesures gardent le contour issu du masque nettoye.
+    std::vector<cv::Point> outline;
+    cv::approxPolyDP(detection.contour, outline,
+      detector.contour_simplification_ratio * cv::arcLength(detection.contour, true), true);
+    cv::drawContours(result.debug_image, std::vector<std::vector<cv::Point>>{outline},
+      0, color, outline_thickness, cv::LINE_AA);
     // Centre visible dans l'image ; sa projection 3D est envoyee dans piece.pose.
     cv::drawMarker(result.debug_image, detection.box.center, cv::Scalar(0, 255, 255),
-      cv::MARKER_CROSS, 12, 2);
-    cv::putText(result.debug_image, piece->forme(), detection.box.center,
-      cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255, 255, 255), 1);
+      cv::MARKER_CROSS, cvRound(12 * drawing_scale), outline_thickness, cv::LINE_AA);
+    const cv::Point label(cvRound(detection.box.center.x + 8 * drawing_scale),
+      cvRound(detection.box.center.y - 8 * drawing_scale));
+    cv::putText(result.debug_image, piece->forme(), label,
+      cv::FONT_HERSHEY_SIMPLEX, 0.5 * drawing_scale, cv::Scalar(0, 0, 0),
+      text_thickness + 2 * cvRound(drawing_scale), cv::LINE_AA);
+    cv::putText(result.debug_image, piece->forme(), label,
+      cv::FONT_HERSHEY_SIMPLEX, 0.5 * drawing_scale, cv::Scalar(255, 255, 255),
+      text_thickness, cv::LINE_AA);
   }
   return result;
 }

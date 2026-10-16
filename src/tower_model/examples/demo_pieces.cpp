@@ -13,9 +13,9 @@ int main()
 
   // Un seul conteneur peut contenir les trois classes grace a la classe mere.
   std::vector<std::unique_ptr<Piece>> pieces;
-  pieces.push_back(std::make_unique<Cube>(1, 0.04));
-  pieces.push_back(std::make_unique<Rectangle>(2, 0.06, 0.04, 0.02));
-  pieces.push_back(std::make_unique<Cylindre>(3, 0.02, 0.05));
+  pieces.push_back(std::make_unique<Cube>(1, 0.05));
+  pieces.push_back(std::make_unique<Rectangle>(2, 0.08, 0.05, 0.025));
+  pieces.push_back(std::make_unique<Cylindre>(3, 0.015, 0.06));  // Rayon = diametre / 2.
 
   // Pose illustrative uniquement : repere de table fictif et centre a mi-hauteur.
   // Dans un noeud, utiliser la pose et la date de mesure fournies par la perception.

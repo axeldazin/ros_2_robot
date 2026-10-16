@@ -23,13 +23,17 @@ struct DetectorConfig
     {{0, 80, 50}, {10, 255, 255}},
     {{170, 80, 50}, {179, 255, 255}},
     {{95, 80, 50}, {135, 255, 255}},
-    {{35, 80, 50}, {85, 255, 255}}
+    {{35, 60, 50}, {85, 255, 255}}
   }};
-  double min_area = 200.0;
+  double min_area = 75.0;
+  double min_area_fraction = 0.00005;  // Fraction de la surface de la ROI.
   double min_fill = 0.7;
-  double min_circularity = 0.65;
+  double min_circularity = 0.65;  // Sur l'enveloppe convexe du contour vert.
+  double min_cylinder_solidity = 0.8;  // Aire du contour / aire de son enveloppe.
   double max_cube_aspect = 1.4;
   int morphology_size = 3;
+  bool scale_morphology_with_resolution = true;
+  double contour_simplification_ratio = 0.0015;  // Affichage uniquement, fraction du perimetre.
   cv::Rect roi;  // Rectangle vide = image entiere.
 };
 

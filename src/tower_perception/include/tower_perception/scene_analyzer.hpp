@@ -10,9 +10,13 @@ namespace tower_perception
 {
 struct GeometryConfig
 {
-  // Hauteurs reelles : 0 = inconnue, donc analyse refusee si cette forme est presente.
-  double rectangle_height = 0.0;
-  double cylinder_height = 0.0;
+  // Dimensions physiques du catalogue, en metres, communes aux pieces d'une meme forme.
+  double cube_side = 0.05;
+  double rectangle_length = 0.08;
+  double rectangle_width = 0.05;
+  double rectangle_height = 0.025;
+  double cylinder_diameter = 0.03;
+  double cylinder_height = 0.06;
   double min_depth = 0.1;
   double max_depth = 3.0;
   double min_valid_depth_fraction = 0.5;
@@ -31,7 +35,8 @@ struct SceneResult
 cv::Mat depth_in_metres(const cv::Mat & depth, double integer_depth_scale);
 
 // Projection des faces superieures. Les poses sont dans le repere optique.
-// Toute piece reconnue sans profondeur/hauteur exploitable fait echouer l'analyse.
+// Les dimensions proviennent du catalogue ; la camera fournit la position et l'orientation.
+// Toute piece reconnue sans profondeur exploitable fait echouer l'analyse.
 SceneResult analyze_scene(
   const cv::Mat & bgr, const cv::Mat & depth_metres,
   const sensor_msgs::msg::CameraInfo & camera_info,

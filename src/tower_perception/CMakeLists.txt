@@ -43,6 +43,10 @@ if(BUILD_TESTING)
 endif()
 
 install(TARGETS perception_node DESTINATION lib/${PROJECT_NAME})
+install(PROGRAMS scripts/image_simulator.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME image_simulator
+)
 install(DIRECTORY launch config DESTINATION share/${PROJECT_NAME})
 install(FILES README.md DESTINATION share/${PROJECT_NAME})
 

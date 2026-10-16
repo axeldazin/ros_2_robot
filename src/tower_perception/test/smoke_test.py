@@ -62,10 +62,10 @@ def main():
     def publish_scene(blank=False, invalid_depth=False):
         bgr = np.zeros((480, 640, 3), dtype=np.uint8)
         if not blank:
-            cv2.rectangle(bgr, (60, 60), (99, 99), (0, 0, 255), -1)
-            cv2.rectangle(bgr, (160, 60), (199, 99), (0, 0, 255), -1)
-            cv2.rectangle(bgr, (260, 180), (339, 219), (255, 0, 0), -1)
-            cv2.circle(bgr, (460, 300), 30, (0, 255, 0), -1)
+            cv2.rectangle(bgr, (60, 60), (85, 85), (0, 0, 255), -1)
+            cv2.rectangle(bgr, (160, 60), (185, 85), (0, 0, 255), -1)
+            cv2.rectangle(bgr, (260, 180), (300, 205), (255, 0, 0), -1)
+            cv2.circle(bgr, (460, 300), 8, (0, 255, 0), -1)
         depth = np.full((480, 640), 0 if invalid_depth else 1000, dtype=np.uint16)
         info = CameraInfo()
         info.header.frame_id = 'test_camera_optical'
@@ -95,9 +95,11 @@ def main():
         try:
             for package, executable, extra in [
                 ('tower_perception', 'perception_node', [
-                    '--ros-args', '-p', 'color_topic:=/test/color',
+                    '--ros-args', '--params-file',
+                    str(Path(get_package_prefix('tower_perception')) /
+                        'share/tower_perception/config/perception.yaml'),
+                    '-p', 'color_topic:=/test/color',
                     '-p', 'depth_topic:=/test/depth', '-p', 'camera_info_topic:=/test/info',
-                    '-p', 'rectangle_height_m:=0.02', '-p', 'cylinder_height_m:=0.05',
                     '-p', 'output_frame:=test_world', '-p', 'max_snapshot_age_s:=0.5']),
                 ('tower_control', 'tower_controller', []),
             ]:
@@ -138,7 +140,13 @@ def main():
             assert [p.color for p in response.observation.pieces] == ['red', 'red', 'blue', 'green']
             assert response.observation.header.frame_id == 'test_world'
             assert all(p.pose.header == response.observation.header for p in response.observation.pieces)
-            assert abs(response.observation.pieces[2].pose.pose.position.z - 1.31) < 1e-5
+            expected_dimensions = [
+                (0.05, 0.05, 0.05), (0.05, 0.05, 0.05),
+                (0.08, 0.05, 0.025), (0.03, 0.03, 0.06),
+            ]
+            for piece, expected in zip(response.observation.pieces, expected_dimensions):
+                assert (piece.dimensions.x, piece.dimensions.y, piece.dimensions.z) == expected
+                assert abs(piece.pose.pose.position.z - (1.3 + expected[2] / 2.0)) < 1e-5
             wait_for(lambda: len(observations) >= 1 and len(debug_images) >= 1)
             assert observations[-1] == response.observation
             assert debug_images[-1].header.frame_id == 'test_camera_optical'

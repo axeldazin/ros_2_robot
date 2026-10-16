@@ -29,3 +29,6 @@ CMakeUserPresets.json
 *.swo
 .DS_Store
 Thumbs.db
+
+# Resultats generes par la simulation d'images
+/simulation_output/

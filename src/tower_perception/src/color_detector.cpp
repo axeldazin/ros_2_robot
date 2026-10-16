@@ -21,6 +21,17 @@ std::vector<Detection2D> detect_colors(const cv::Mat & bgr, const DetectorConfig
 
   cv::Mat hsv;
   cv::cvtColor(bgr(roi), hsv, cv::COLOR_BGR2HSV);
+  const double min_area = std::max(config.min_area,
+    config.min_area_fraction * static_cast<double>(roi.width) * roi.height);
+  cv::Mat kernel;
+  if (config.morphology_size > 1) {
+    // 3 pixels a 640x480 correspondent a 19 pixels sur une photo 3024x4032.
+    // Utiliser la resolution complete pour garder le meme nettoyage si la ROI change.
+    const double scale = config.scale_morphology_with_resolution ?
+      std::max(1.0, std::min(bgr.cols, bgr.rows) / 480.0) : 1.0;
+    const int kernel_size = cvRound(config.morphology_size * scale) | 1;
+    kernel = cv::getStructuringElement(cv::MORPH_ELLIPSE, {kernel_size, kernel_size});
+  }
   std::vector<Detection2D> detections;
   for (int shape_index = 0; shape_index < 3; ++shape_index) {
     cv::Mat mask;
@@ -32,9 +43,7 @@ std::vector<Detection2D> detect_colors(const cv::Mat & bgr, const DetectorConfig
       cv::inRange(hsv, config.ranges[1].low, config.ranges[1].high, second_red);
       cv::bitwise_or(mask, second_red, mask);
     }
-    if (config.morphology_size > 1) {
-      const auto kernel = cv::getStructuringElement(cv::MORPH_ELLIPSE,
-        {config.morphology_size, config.morphology_size});
+    if (!kernel.empty()) {
       cv::morphologyEx(mask, mask, cv::MORPH_OPEN, kernel);
       cv::morphologyEx(mask, mask, cv::MORPH_CLOSE, kernel);
     }
@@ -43,7 +52,7 @@ std::vector<Detection2D> detect_colors(const cv::Mat & bgr, const DetectorConfig
     cv::findContours(mask, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
     for (auto contour : contours) {
       const double area = cv::contourArea(contour);
-      if (area < config.min_area) {
+      if (area < min_area) {
         continue;
       }
       const auto bounds = cv::boundingRect(contour);
@@ -63,8 +72,6 @@ std::vector<Detection2D> detect_colors(const cv::Mat & bgr, const DetectorConfig
         continue;
       }
       const double fill = area / box.size.area();
-      const double perimeter = cv::arcLength(contour, true);
-      const double circularity = 4.0 * CV_PI * area / (perimeter * perimeter);
       if (shape_index == 0 && (large / small > config.max_cube_aspect ||
         fill < config.min_fill))
       {
@@ -73,12 +80,25 @@ std::vector<Detection2D> detect_colors(const cv::Mat & bgr, const DetectorConfig
       if (shape_index == 1 && fill < config.min_fill) {
         continue;
       }
-      if (shape_index == 2 && circularity < config.min_circularity) {
-        continue;
+      double score = fill;
+      if (shape_index == 2) {
+        // Les asperites de la surface imprimee gonflent le perimetre brut.
+        // L'enveloppe conserve la forme globale, ronde ou ovale, du cylindre.
+        std::vector<cv::Point> hull;
+        cv::convexHull(contour, hull);
+        const double hull_area = cv::contourArea(hull);
+        const double perimeter = cv::arcLength(hull, true);
+        const double circularity = 4.0 * CV_PI * hull_area / (perimeter * perimeter);
+        const double solidity = area / hull_area;
+        // Une forme tres creuse ne doit pas devenir un cylindre en comblant ses creux.
+        if (circularity < config.min_circularity || solidity < config.min_cylinder_solidity) {
+          continue;
+        }
+        score = circularity * solidity;
       }
-      const float score = static_cast<float>(std::clamp(
-        shape_index == 2 ? circularity : fill, 0.0, 1.0));
-      detections.push_back({static_cast<Shape>(shape_index), box, contour, score});
+      // Garder le contour reel pour ne pas echantillonner le fond dans la profondeur.
+      detections.push_back({static_cast<Shape>(shape_index), box, contour,
+        static_cast<float>(std::clamp(score, 0.0, 1.0))});
     }
   }
   std::sort(detections.begin(), detections.end(), [](const auto & a, const auto & b) {

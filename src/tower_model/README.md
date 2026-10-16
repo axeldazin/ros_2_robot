@@ -45,9 +45,9 @@ Exemple :
 #include "tower_model/rectangle.hpp"
 #include "tower_model/cylindre.hpp"
 
-tower_model::Cube cube(1, 0.04);                        // Rouge, côté de 4 cm
-tower_model::Rectangle rectangle(2, 0.06, 0.04, 0.02); // Bleu, 6 × 4 × 2 cm
-tower_model::Cylindre cylindre(3, 0.02, 0.05);          // Vert, rayon 2 cm, hauteur 5 cm
+tower_model::Cube cube(1, 0.05);                         // Rouge, côté de 5 cm
+tower_model::Rectangle rectangle(2, 0.08, 0.05, 0.025); // Bleu, 8 × 5 × 2,5 cm
+tower_model::Cylindre cylindre(3, 0.015, 0.06);          // Vert, diamètre 3 cm, hauteur 6 cm
 ```
 
 ## Le polymorphisme
@@ -59,9 +59,9 @@ Un conteneur de pointeurs vers `Piece` peut contenir les trois formes :
 #include <vector>
 
 std::vector<std::unique_ptr<tower_model::Piece>> pieces;
-pieces.push_back(std::make_unique<tower_model::Cube>(1, 0.04));
-pieces.push_back(std::make_unique<tower_model::Rectangle>(2, 0.06, 0.04, 0.02));
-pieces.push_back(std::make_unique<tower_model::Cylindre>(3, 0.02, 0.05));
+pieces.push_back(std::make_unique<tower_model::Cube>(1, 0.05));
+pieces.push_back(std::make_unique<tower_model::Rectangle>(2, 0.08, 0.05, 0.025));
+pieces.push_back(std::make_unique<tower_model::Cylindre>(3, 0.015, 0.06));
 
 for (const auto & piece : pieces) {
   const double volume = piece->volume();
