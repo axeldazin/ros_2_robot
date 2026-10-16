@@ -1,0 +1,31 @@
+# ROS 2 / colcon : fichiers generes
+/build/
+/install/
+/log/
+/.ros/
+/cmake-build-*/
+# Python : caches et environnements locaux
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+/.venv/
+/venv/
+# Enregistrements ROS (rosbag)
+*.bag
+*.bag.active
+*.db3
+*.db3-shm
+*.db3-wal
+*.mcap
+/rosbag2_*/
+# Configuration locale des editeurs et fichiers temporaires
+/.vscode/
+/.idea/
+CMakeUserPresets.json
+*~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

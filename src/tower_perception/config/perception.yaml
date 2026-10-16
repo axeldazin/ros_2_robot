@@ -1,0 +1,40 @@
+perception_node:
+  ros__parameters:
+    color_topic: /camera/camera/color/image_raw
+    depth_topic: /camera/camera/aligned_depth_to_color/image_raw
+    camera_info_topic: /camera/camera/color/camera_info
+
+    # Vide : poses dans le repere optique couleur.
+    # Pour "base_link" (ou le repere reel du XARM), fournir la TF calibree.
+    output_frame: ""
+    depth_scale: 0.001  # 16UC1 RealSense en mm ; les images 32FC1 sont en metres.
+    sync_tolerance_s: 0.05
+    max_snapshot_age_s: 2.0
+    tracking_distance_m: 0.05
+
+    # A MESURER : zero bloque l'analyse si la forme correspondante est presente.
+    rectangle_height_m: 0.0
+    cylinder_height_m: 0.0
+
+    # Hypothese par defaut : camera verticale regardant les faces du dessus.
+    # Normale du support vers le haut, exprimee dans le repere optique couleur.
+    table_normal_camera: [0.0, 0.0, -1.0]
+    min_depth_m: 0.1
+    max_depth_m: 3.0
+    min_valid_depth_fraction: 0.5
+
+    roi: [0, 0, 0, 0]  # Ou [x, y, largeur, hauteur] pour exclure la tour, par exemple.
+    min_area_px: 200.0
+    morphology_size: 3
+    min_fill_ratio: 0.7
+    min_circularity: 0.65
+    max_cube_aspect_ratio: 1.4
+
+    red_hsv_low: [0, 80, 50]
+    red_hsv_high: [10, 255, 255]
+    red_wrap_hsv_low: [170, 80, 50]
+    red_wrap_hsv_high: [179, 255, 255]
+    blue_hsv_low: [95, 80, 50]
+    blue_hsv_high: [135, 255, 255]
+    green_hsv_low: [35, 80, 50]
+    green_hsv_high: [85, 255, 255]

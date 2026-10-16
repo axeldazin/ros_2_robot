@@ -1,0 +1,9 @@
+# Requete vide : analyser la derniere paire couleur/profondeur disponible.
+---
+# true : analyse complete, y compris lorsqu'aucune piece n'est detectee.
+# false : donnees absentes/perimees, calibration manquante ou analyse impossible.
+bool success
+string message
+
+# Valide uniquement si success = true ; aussi publie sur /detected_pieces.
+tower_interfaces/PieceArray observation

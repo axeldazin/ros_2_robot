@@ -1,5 +1,0 @@
-[0.243s] colcon DEBUG Command line arguments: ['/usr/bin/colcon', 'test-result', '--test-result-base', 'build/tower_model', '--verbose']
-[0.243s] colcon DEBUG Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='test-result', test_result_base='build/tower_model', all=False, result_files_only=False, verbose=True, delete=False, delete_yes=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f8982d79880>, verb_extension=<colcon_test_result.verb.test_result.TestResultVerb object at 0x7f8982e9a970>, main=<bound method TestResultVerb.main of <colcon_test_result.verb.test_result.TestResultVerb object at 0x7f8982e9a970>>, mixin_verb=('test-result',))
-[0.246s] colcon.colcon_test_result.test_result Level 1 get_test_results(ctest)
-[0.296s] colcon.colcon_test_result.test_result Level 1 get_test_results(xunit)
-[0.313s] colcon.colcon_test_result.test_result.xunit DEBUG Skipping 'build/tower_model/Testing/20261015-0802/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'

@@ -119,8 +119,8 @@ La démonstration crée les trois pièces dans une liste commune, affiche leur
 couleur et leur volume, et les convertit en messages. Elle utilise un repère
 fictif `table_demo`, ne publie aucun topic et ne commande pas le robot.
 
-La découverte est limitée à ces deux packages car les autres dossiers `tower_*`
-portent encore le nom ROS `sorting` dans leur configuration.
+La découverte est limitée à ces deux packages pour compiler le modèle sans
+dépendre des pilotes matériels et de leur SDK.
 
 Pour utiliser la bibliothèque dans un futur nœud C++, déclarer
 `<depend>tower_model</depend>` dans son `package.xml`, puis dans CMake :

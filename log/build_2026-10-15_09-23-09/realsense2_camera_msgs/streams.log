@@ -1,5 +1,0 @@
-[0.087s] Invoking command in '/net/netud/s/adazin/Bureau/ros_2_robot/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy _=/usr/bin/env /usr/bin/cmake /net/netud/s/adazin/Bureau/ros_2_robot/src/realsense-ros/realsense2_camera_msgs -DCMAKE_INSTALL_PREFIX=/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs
-[1.747s] -- The C compiler identification is GNU 11.5.0
-[3.187s] -- The CXX compiler identification is GNU 11.5.0
-[4.571s] -- Detecting C compiler ABI info
-[7.562s] Invoked command in '/net/netud/s/adazin/Bureau/ros_2_robot/build/realsense2_camera_msgs' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy _=/usr/bin/env /usr/bin/cmake /net/netud/s/adazin/Bureau/ros_2_robot/src/realsense-ros/realsense2_camera_msgs -DCMAKE_INSTALL_PREFIX=/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs

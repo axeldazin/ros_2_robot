@@ -120,6 +120,14 @@ Le dépôt [xarm_ros2](https://github.com/xArm-Developer/xarm_ros2) fournit nota
 
 ## 5. Nœud de perception
 
+Une première implémentation est disponible dans [tower_perception](src/tower_perception/README.md).
+Elle mémorise la dernière paire d'images couleur/profondeur alignée et lance
+l'analyse à l'appel du service `/perception/analyze_image` ou à la réception
+d'un message sur `/perception/analyze`. Le résultat est publié sous forme de
+`PieceArray` sur `/detected_pieces` et retourné également par le service.
+Un [récepteur minimal côté contrôle](src/tower_control/README.md) conserve ce
+vecteur ; les mouvements du bras restent à développer.
+
 ### Entrées et traitement
 
 Le nœud reçoit les images couleur, la profondeur et les informations de calibration de la caméra.
@@ -220,7 +228,7 @@ Référence : [scène de planification MoveIt](https://moveit.picknik.ai/humble/
 src/
 ├── sorting/               # Exemple ROS existant
 ├── sorting_msgs/          # Interface de l’exemple existant
-├── tower_interfaces/      # Messages et action PickAndPlace
+├── tower_interfaces/      # Messages Piece/PieceArray et service AnalyzeImage
 ├── tower_model/           # Classe Piece et classes Cube, Rectangle, Cylindre
 ├── tower_perception/      # Traitement caméra et détection
 ├── tower_control/         # Supervision et manipulation
