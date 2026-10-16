@@ -1,0 +1,29 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/tower_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tower_interfaces/action/detail/pick_and_place__type_support_c.cpp.o"
+  "CMakeFiles/tower_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tower_interfaces/action/detail/pick_and_place__type_support_c.cpp.o.d"
+  "CMakeFiles/tower_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tower_interfaces/msg/detail/piece__type_support_c.cpp.o"
+  "CMakeFiles/tower_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tower_interfaces/msg/detail/piece__type_support_c.cpp.o.d"
+  "CMakeFiles/tower_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tower_interfaces/msg/detail/piece_array__type_support_c.cpp.o"
+  "CMakeFiles/tower_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tower_interfaces/msg/detail/piece_array__type_support_c.cpp.o.d"
+  "CMakeFiles/tower_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tower_interfaces/msg/detail/tower_state__type_support_c.cpp.o"
+  "CMakeFiles/tower_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tower_interfaces/msg/detail/tower_state__type_support_c.cpp.o.d"
+  "CMakeFiles/tower_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tower_interfaces/srv/detail/set_building_enabled__type_support_c.cpp.o"
+  "CMakeFiles/tower_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tower_interfaces/srv/detail/set_building_enabled__type_support_c.cpp.o.d"
+  "libtower_interfaces__rosidl_typesupport_fastrtps_c.pdb"
+  "libtower_interfaces__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/tower_interfaces/action/detail/pick_and_place__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/tower_interfaces/action/detail/pick_and_place__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/tower_interfaces/msg/detail/piece__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/tower_interfaces/msg/detail/piece__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/tower_interfaces/msg/detail/piece_array__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/tower_interfaces/msg/detail/piece_array__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/tower_interfaces/msg/detail/tower_state__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/tower_interfaces/msg/detail/tower_state__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/tower_interfaces/srv/detail/set_building_enabled__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/tower_interfaces/srv/detail/set_building_enabled__type_support_c.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/tower_interfaces__rosidl_typesupport_fastrtps_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

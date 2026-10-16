@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20261015-0802-Experimental"
+	Name="hamster"
+	Generator="ctest-3.26.5"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="11.5.0"
+	OSName="Linux"
+	Hostname="hamster"
+	OSRelease="5.14.0-611.55.1.el9_7.x86_64"
+	OSVersion="#1 SMP PREEMPT_DYNAMIC Tue May 19 15:19:29 EDT 2026"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="158"
+	ProcessorCacheSize="12288"
+	NumberOfLogicalCPU="6"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="4095"
+	TotalPhysicalMemory="15602"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="2800.38"
+	>
+	<Testing>
+		<StartDateTime>Oct 15 10:02 CEST</StartDateTime>
+		<StartTestTime>1792051340</StartTestTime>
+		<TestList>
+			<Test>./test_pieces</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>test_pieces</Name>
+			<Path>.</Path>
+			<FullName>./test_pieces</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model/test_results/tower_model/test_pieces.gtest.xml" "--package-name" "tower_model" "--output-file" "/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model/ament_cmake_gtest/test_pieces.txt" "--command" "/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model/test_pieces" "--gtest_output=xml:/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model/test_results/tower_model/test_pieces.gtest.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>2.29287</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model/test_results/tower_model/test_pieces.gtest.xml" "--package-name" "tower_model" "--output-file" "/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model/ament_cmake_gtest/test_pieces.txt" "--command" "/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model/test_pieces" "--gtest_output=xml:/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model/test_results/tower_model/test_pieces.gtest.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model':
+ - /net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model/test_pieces --gtest_output=xml:/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model/test_results/tower_model/test_pieces.gtest.xml
+Running main() from /opt/ros/jazzy/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from Pieces
+[ RUN      ] Pieces.PolymorphismAndFixedColors
+[       OK ] Pieces.PolymorphismAndFixedColors (0 ms)
+[ RUN      ] Pieces.RejectInvalidDimensions
+[       OK ] Pieces.RejectInvalidDimensions (0 ms)
+[ RUN      ] Pieces.RosConversionPreservesMeasurementsAndUsesDiameter
+[       OK ] Pieces.RosConversionPreservesMeasurementsAndUsesDiameter (0 ms)
+[ RUN      ] Pieces.ConfidenceBounds
+[       OK ] Pieces.ConfidenceBounds (0 ms)
+[----------] 4 tests from Pieces (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model/test_results/tower_model/test_pieces.gtest.xml'
+-- run_test.py: verify result file '/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model/test_results/tower_model/test_pieces.gtest.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>gtest</Label>
+			</Labels>
+		</Test>
+		<EndDateTime>Oct 15 10:02 CEST</EndDateTime>
+		<EndTestTime>1792051343</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

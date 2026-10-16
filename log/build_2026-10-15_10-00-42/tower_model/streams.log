@@ -1,0 +1,86 @@
+[0.197s] Invoking command in '/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model': AMENT_PREFIX_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces:/opt/ros/jazzy/opt/yaml_cpp_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/lib/python3.9/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/cmake /net/netud/s/adazin/Bureau/ros_2_robot/src/tower_model -DCMAKE_INSTALL_PREFIX=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model
+[0.486s] -- The C compiler identification is GNU 11.5.0
+[0.663s] -- The CXX compiler identification is GNU 11.5.0
+[0.695s] -- Detecting C compiler ABI info
+[1.234s] -- Detecting C compiler ABI info - done
+[1.257s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.257s] -- Detecting C compile features
+[1.258s] -- Detecting C compile features - done
+[1.290s] -- Detecting CXX compiler ABI info
+[3.393s] -- Detecting CXX compiler ABI info - done
+[3.424s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.424s] -- Detecting CXX compile features
+[3.425s] -- Detecting CXX compile features - done
+[3.471s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.676s] -- Found Python3: /usr/bin/python3 (found version "3.9.23") found components: Interpreter 
+[4.008s] -- Found tower_interfaces: 0.1.0 (/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/share/tower_interfaces/cmake)
+[4.157s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[4.199s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[4.323s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.375s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.732s] -- Found ament_cmake_gtest: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[4.753s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[4.775s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[5.202s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[5.203s] -- Found Threads: TRUE  
+[5.475s] -- Configuring done (5.2s)
+[6.088s] -- Generating done (0.5s)
+[6.413s] -- Build files have been written to: /net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model
+[6.425s] Invoked command in '/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model' returned '0': AMENT_PREFIX_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces:/opt/ros/jazzy/opt/yaml_cpp_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/lib/python3.9/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/cmake /net/netud/s/adazin/Bureau/ros_2_robot/src/tower_model -DCMAKE_INSTALL_PREFIX=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model
+[6.428s] Invoking command in '/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model': AMENT_PREFIX_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces:/opt/ros/jazzy/opt/yaml_cpp_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/lib/python3.9/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/cmake --build /net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model -- -j6 -l6
+[6.603s] [  7%] Building CXX object CMakeFiles/tower_model.dir/src/piece.cpp.o
+[6.974s] [ 14%] Building CXX object CMakeFiles/tower_model.dir/src/cylindre.cpp.o
+[7.159s] [ 21%] Building CXX object CMakeFiles/tower_model.dir/src/ros_conversion.cpp.o
+[7.766s] [ 28%] Building CXX object CMakeFiles/tower_model.dir/src/rectangle.cpp.o
+[7.955s] [ 35%] Building CXX object CMakeFiles/tower_model.dir/src/cube.cpp.o
+[8.138s] [ 42%] Linking CXX shared library libtower_model.so
+[8.714s] [ 42%] Built target tower_model
+[8.769s] [ 50%] Building CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[12.343s] [ 57%] Linking CXX static library libgtest.a
+[17.344s] [ 57%] Built target gtest
+[17.481s] [ 64%] Building CXX object CMakeFiles/demo_pieces.dir/examples/demo_pieces.cpp.o
+[18.128s] [ 71%] Linking CXX executable demo_pieces
+[18.487s] [ 71%] Built target demo_pieces
+[18.539s] [ 78%] Building CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[19.206s] [ 85%] Linking CXX static library libgtest_main.a
+[19.282s] [ 85%] Built target gtest_main
+[19.317s] [ 92%] Building CXX object CMakeFiles/test_pieces.dir/test/test_pieces.cpp.o
+[20.558s] [100%] Linking CXX executable test_pieces
+[22.768s] [100%] Built target test_pieces
+[22.815s] Invoked command in '/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model' returned '0': AMENT_PREFIX_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces:/opt/ros/jazzy/opt/yaml_cpp_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/lib/python3.9/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/cmake --build /net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model -- -j6 -l6
+[22.830s] Invoking command in '/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model': AMENT_PREFIX_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces:/opt/ros/jazzy/opt/yaml_cpp_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/lib/python3.9/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/cmake --install /net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model
+[22.845s] -- Install configuration: ""
+[22.856s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/lib/libtower_model.so
+[22.904s] -- Set runtime path of "/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/lib/libtower_model.so" to ""
+[22.921s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/lib/tower_model/demo_pieces
+[23.025s] -- Set runtime path of "/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/lib/tower_model/demo_pieces" to ""
+[23.029s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/include
+[23.035s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/include/tower_model
+[23.054s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/include/tower_model/rectangle.hpp
+[23.078s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/include/tower_model/cube.hpp
+[23.152s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/include/tower_model/piece.hpp
+[23.240s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/include/tower_model/ros_conversion.hpp
+[23.262s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/include/tower_model/cylindre.hpp
+[23.286s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/README.md
+[23.301s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/environment/library_path.sh
+[23.309s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/environment/library_path.dsv
+[23.331s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/ament_index/resource_index/package_run_dependencies/tower_model
+[23.352s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/ament_index/resource_index/parent_prefix_path/tower_model
+[23.369s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/environment/ament_prefix_path.sh
+[23.383s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/environment/ament_prefix_path.dsv
+[23.390s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/environment/path.sh
+[23.652s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/environment/path.dsv
+[23.742s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/local_setup.bash
+[23.867s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/local_setup.sh
+[23.975s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/local_setup.zsh
+[24.072s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/local_setup.dsv
+[24.262s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/package.dsv
+[24.372s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/ament_index/resource_index/packages/tower_model
+[24.448s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/cmake/export_tower_modelExport.cmake
+[24.459s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/cmake/export_tower_modelExport-noconfig.cmake
+[24.520s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/cmake/ament_cmake_export_targets-extras.cmake
+[24.546s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/cmake/ament_cmake_export_dependencies-extras.cmake
+[24.566s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/cmake/tower_modelConfig.cmake
+[24.592s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/cmake/tower_modelConfig-version.cmake
+[24.609s] -- Installing: /net/netud/s/adazin/Bureau/ros_2_robot/install/tower_model/share/tower_model/package.xml
+[24.629s] Invoked command in '/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model' returned '0': AMENT_PREFIX_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces:/opt/ros/jazzy/opt/yaml_cpp_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/net/netud/s/adazin/Bureau/ros_2_robot/install/tower_interfaces/lib/python3.9/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/cmake --install /net/netud/s/adazin/Bureau/ros_2_robot/build/tower_model

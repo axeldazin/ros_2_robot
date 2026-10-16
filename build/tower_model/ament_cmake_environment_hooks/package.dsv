@@ -1,0 +1,4 @@
+source;share/tower_model/local_setup.bash
+source;share/tower_model/local_setup.dsv
+source;share/tower_model/local_setup.sh
+source;share/tower_model/local_setup.zsh

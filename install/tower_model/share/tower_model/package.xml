@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>tower_model</name>
+  <version>0.1.0</version>
+  <description>Classes de pieces et conversion vers les messages ROS du projet.</description>
+  <maintainer email="Axel.Dazin@bordeaux-inp.fr">adazin</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>tower_interfaces</depend>
+  <depend>geometry_msgs</depend>
+  <test_depend>ament_cmake_gtest</test_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

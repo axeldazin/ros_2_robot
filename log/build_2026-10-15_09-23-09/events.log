@@ -1,0 +1,86 @@
+[0.000000] (-) TimerEvent: {}
+[0.000256] (-) JobUnselected: {'identifier': 'realsense2_description'}
+[0.000336] (-) JobUnselected: {'identifier': 'sorting'}
+[0.000386] (-) JobUnselected: {'identifier': 'sorting'}
+[0.000415] (-) JobUnselected: {'identifier': 'sorting'}
+[0.000440] (-) JobUnselected: {'identifier': 'sorting'}
+[0.000465] (-) JobUnselected: {'identifier': 'sorting_msgs'}
+[0.000493] (realsense2_camera_msgs) JobQueued: {'identifier': 'realsense2_camera_msgs', 'dependencies': OrderedDict()}
+[0.000522] (realsense2_camera) JobQueued: {'identifier': 'realsense2_camera', 'dependencies': OrderedDict([('realsense2_camera_msgs', '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs')])}
+[0.000569] (realsense2_camera_msgs) JobStarted: {'identifier': 'realsense2_camera_msgs'}
+[0.027832] (realsense2_camera_msgs) JobProgress: {'identifier': 'realsense2_camera_msgs', 'progress': 'cmake'}
+[0.054043] (realsense2_camera_msgs) Command: {'cmd': ['/usr/bin/cmake', '/net/netud/s/adazin/Bureau/ros_2_robot/src/realsense-ros/realsense2_camera_msgs', '-DCMAKE_INSTALL_PREFIX=/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs'], 'cwd': '/net/netud/s/adazin/Bureau/ros_2_robot/build/realsense2_camera_msgs', 'env': OrderedDict([('SHELL', '/bin/bash'), ('ROS_VERSION', '2'), ('SESSION_MANAGER', 'local/unix:@/tmp/.ICE-unix/15128,unix/unix:/tmp/.ICE-unix/15128'), ('COLORTERM', 'truecolor'), ('XDG_CONFIG_DIRS', '/etc/xdg'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('HISTCONTROL', 'ignoredups'), ('XDG_MENU_PREFIX', 'xfce-'), ('TERM_PROGRAM_VERSION', '1.108.1'), ('ROS_PYTHON_VERSION', '3'), ('HISTSIZE', '1000'), ('HOSTNAME', 'hamster'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXBW5Jbh/agent.15128'), ('DESKTOP_SESSION', 'xfce'), ('SSH_AGENT_PID', '15146'), ('NO_AT_BRIDGE', '1'), ('XDG_SEAT', 'seat0'), ('PWD', '/net/netud/s/adazin/Bureau/ros_2_robot/build/realsense2_camera_msgs'), ('KRB5CCNAME', 'KCM:'), ('XDG_SESSION_DESKTOP', 'xfce'), ('LOGNAME', 'adazin'), ('XDG_SESSION_TYPE', 'x11'), ('MODULESHOME', '/usr/share/Modules'), ('PANEL_GDK_CORE_DEVICE_EVENTS', '0'), ('ROS_DOMAIN_ID', '7'), ('XAUTHORITY', '/run/lightdm/adazin/xauthority'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/adazin'), ('HOME', '/net/netud/s/adazin'), ('SSH_ASKPASS', '/usr/libexec/openssh/gnome-ssh-askpass'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'XFCE'), ('AMENT_PREFIX_PATH', '/opt/ros/jazzy'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('CMAKE_PREFIX_PATH', '/opt/ros/jazzy/opt/yaml_cpp_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('CHROME_DESKTOP', 'code.desktop'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('XDG_SESSION_CLASS', 'user'), ('PYTHONPATH', '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.9/site-packages'), ('COLCON', '1'), ('TERM', 'xterm-256color'), ('LESSOPEN', '||/usr/bin/lesspipe.sh %s'), ('USER', 'adazin'), ('_colcon_cd_root', '/opt/ros/jazzy/'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/252709/vscode-git-b9c2c49a4c.sock'), ('CONDA_SHLVL', '0'), ('MODULES_RUN_QUARANTINE', 'LD_LIBRARY_PATH LD_PRELOAD'), ('LOADEDMODULES', ''), ('DISPLAY', ':0.0'), ('SHLVL', '1'), ('XDG_VTNR', '1'), ('XDG_SESSION_ID', '4'), ('FC_FONTATIONS', '1'), ('LD_LIBRARY_PATH', '/opt/ros/jazzy/opt/yaml_cpp_vendor/lib64:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib64:/opt/ros/jazzy/opt/gz_math_vendor/lib64:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib64:/opt/ros/jazzy/opt/gz_cmake_vendor/lib64:/opt/ros/jazzy/lib'), ('XDG_RUNTIME_DIR', '/run/user/252709'), ('__MODULES_LMINIT', 'module use --append /usr/share/Modules/modulefiles:module use --append /etc/modulefiles:module use --append /usr/share/modulefiles'), ('DEBUGINFOD_IMA_CERT_PATH', '/etc/keys/ima:'), ('which_declare', 'declare -f'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_DATA_DIRS', '/net/netud/s/adazin/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('GDK_BACKEND', 'x11'), ('PATH', '/opt/ros/jazzy/opt/uncrustify_vendor/bin:/opt/ros/jazzy/bin:/net/netud/s/adazin/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/net/netud/s/adazin/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/usr/share/Modules/bin:/usr/condabin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin'), ('MODULEPATH', '/etc/scl/modulefiles:/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles'), ('GDMSESSION', 'xfce'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/252709/bus'), ('MAIL', '/var/spool/mail/adazin'), ('ROS_DISTRO', 'jazzy'), ('OLDPWD', '/net/netud/s/adazin/Bureau/ros_2_robot/src'), ('MODULES_CMD', '/usr/share/Modules/libexec/modulecmd.tcl'), ('TERM_PROGRAM', 'vscode'), ('BASH_FUNC_ml%%', '() {  module ml "$@"\n}'), ('BASH_FUNC_which%%', '() {  ( alias;\n eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@\n}'), ('BASH_FUNC_module%%', '() {  local _mlredir=0;\n if [ -n "${MODULES_REDIRECT_OUTPUT+x}" ]; then\n if [ "$MODULES_REDIRECT_OUTPUT" = \'0\' ]; then\n _mlredir=0;\n else\n if [ "$MODULES_REDIRECT_OUTPUT" = \'1\' ]; then\n _mlredir=1;\n fi;\n fi;\n fi;\n case " $@ " in \n *\' --no-redirect \'*)\n _mlredir=0\n ;;\n *\' --redirect \'*)\n _mlredir=1\n ;;\n esac;\n if [ $_mlredir -eq 0 ]; then\n _module_raw "$@";\n else\n _module_raw "$@" 2>&1;\n fi\n}'), ('BASH_FUNC_scl%%', '() {  if [ "$1" = "load" -o "$1" = "unload" ]; then\n eval "module $@";\n else\n /usr/bin/scl "$@";\n fi\n}'), ('BASH_FUNC__module_raw%%', '() {  eval "$(/usr/bin/tclsh \'/usr/share/Modules/libexec/modulecmd.tcl\' bash "$@")";\n _mlstatus=$?;\n return $_mlstatus\n}'), ('_', '/usr/bin/env')]), 'shell': False}
+[0.094688] (-) TimerEvent: {}
+[0.195106] (-) TimerEvent: {}
+[0.295333] (-) TimerEvent: {}
+[0.395562] (-) TimerEvent: {}
+[0.495861] (-) TimerEvent: {}
+[0.596440] (-) TimerEvent: {}
+[0.696935] (-) TimerEvent: {}
+[0.797098] (-) TimerEvent: {}
+[0.897299] (-) TimerEvent: {}
+[0.997544] (-) TimerEvent: {}
+[1.097780] (-) TimerEvent: {}
+[1.198109] (-) TimerEvent: {}
+[1.298653] (-) TimerEvent: {}
+[1.398998] (-) TimerEvent: {}
+[1.521809] (-) TimerEvent: {}
+[1.622304] (-) TimerEvent: {}
+[1.722512] (-) TimerEvent: {}
+[1.726341] (realsense2_camera_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.5.0\n'}
+[1.822611] (-) TimerEvent: {}
+[1.940163] (-) TimerEvent: {}
+[2.040658] (-) TimerEvent: {}
+[2.140879] (-) TimerEvent: {}
+[2.241046] (-) TimerEvent: {}
+[2.341245] (-) TimerEvent: {}
+[2.460217] (-) TimerEvent: {}
+[2.574944] (-) TimerEvent: {}
+[2.717855] (-) TimerEvent: {}
+[2.818176] (-) TimerEvent: {}
+[2.918787] (-) TimerEvent: {}
+[3.019281] (-) TimerEvent: {}
+[3.119552] (-) TimerEvent: {}
+[3.151060] (realsense2_camera_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.5.0\n'}
+[3.219689] (-) TimerEvent: {}
+[3.320102] (-) TimerEvent: {}
+[3.420428] (-) TimerEvent: {}
+[3.521064] (-) TimerEvent: {}
+[3.621660] (-) TimerEvent: {}
+[3.722108] (-) TimerEvent: {}
+[4.063846] (-) TimerEvent: {}
+[4.164396] (-) TimerEvent: {}
+[4.264989] (-) TimerEvent: {}
+[4.397349] (-) TimerEvent: {}
+[4.497714] (-) TimerEvent: {}
+[4.566473] (realsense2_camera_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.597891] (-) TimerEvent: {}
+[4.728960] (-) TimerEvent: {}
+[4.829211] (-) TimerEvent: {}
+[4.929695] (-) TimerEvent: {}
+[5.030095] (-) TimerEvent: {}
+[5.130363] (-) TimerEvent: {}
+[5.430902] (-) TimerEvent: {}
+[5.531077] (-) TimerEvent: {}
+[5.631402] (-) TimerEvent: {}
+[5.732048] (-) TimerEvent: {}
+[5.832565] (-) TimerEvent: {}
+[5.936671] (-) TimerEvent: {}
+[6.037297] (-) TimerEvent: {}
+[6.137917] (-) TimerEvent: {}
+[6.238544] (-) TimerEvent: {}
+[6.339070] (-) TimerEvent: {}
+[6.439318] (-) TimerEvent: {}
+[6.539577] (-) TimerEvent: {}
+[6.639859] (-) TimerEvent: {}
+[6.740315] (-) TimerEvent: {}
+[6.840906] (-) TimerEvent: {}
+[7.201701] (-) TimerEvent: {}
+[7.302356] (-) TimerEvent: {}
+[7.402580] (-) TimerEvent: {}
+[7.502848] (-) TimerEvent: {}
+[7.562157] (realsense2_camera_msgs) CommandEnded: {'returncode': -2}
+[7.602921] (-) TimerEvent: {}
+[7.606832] (realsense2_camera_msgs) JobEnded: {'identifier': 'realsense2_camera_msgs', 'rc': 'SIGINT'}
+[7.618260] (realsense2_camera) JobSkipped: {'identifier': 'realsense2_camera'}
+[7.618301] (-) EventReactorShutdown: {}

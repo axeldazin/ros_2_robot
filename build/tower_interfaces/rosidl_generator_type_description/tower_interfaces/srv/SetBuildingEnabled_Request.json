@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "tower_interfaces/srv/SetBuildingEnabled_Request",
+      "fields": [
+        {
+          "name": "enabled",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "tower_interfaces/srv/SetBuildingEnabled_Request",
+      "hash_string": "RIHS01_d28f5d370d21405320eba6437ebe5b14d950037ab736cccec811f5e79539a578"
+    }
+  ]
+}

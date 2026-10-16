@@ -1,0 +1,41 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from tower_interfaces/msg/TowerState.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module tower_interfaces {
+  module msg {
+    module TowerState_Constants {
+      const uint8 IDLE = 0;
+      const uint8 OBSERVING = 1;
+      const uint8 SELECTING = 2;
+      const uint8 MANIPULATING = 3;
+      const uint8 VERIFYING = 4;
+      const uint8 PAUSED = 5;
+      const uint8 FINISHED = 6;
+      const uint8 ERROR = 7;
+    };
+    @verbatim (language="comment", text=
+      "Etat publie sur /tower_state par supervisor_node.")
+    struct TowerState {
+      @verbatim (language="comment", text=
+        "Date de publication ; frame_id = repere de construction de la tour.")
+      std_msgs::msg::Header header;
+
+      uint8 state;
+
+      @verbatim (language="comment", text=
+        "Nombre de pieces dont le placement a ete verifie.")
+      uint32 placed_count;
+
+      @verbatim (language="comment", text=
+        "Hauteur estimee en metres depuis la surface de support.")
+      double height;
+
+      @verbatim (language="comment", text=
+        "Explication lisible : etape courante, raison de pause ou erreur.")
+      string detail;
+    };
+  };
+};

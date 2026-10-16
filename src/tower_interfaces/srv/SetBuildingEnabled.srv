@@ -1,0 +1,11 @@
+# Service /set_building_enabled fourni par supervisor_node.
+# true : autoriser le lancement de la prochaine manipulation.
+# false : demander une pause apres la manipulation et sa verification.
+# Ce service ne remet pas les compteurs a zero et ne relance pas une tour finie.
+bool enabled
+---
+# true : demande acceptee ; false : demande refusee (ex. erreur non resolue).
+# Une demande acceptee ne signifie pas que la pause est deja effective.
+# Consulter /tower_state pour connaitre l'etat reel.
+bool success
+string message

@@ -1,0 +1,46 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from tower_interfaces/action/PickAndPlace.action
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+#include "tower_interfaces/msg/Piece.idl"
+
+module tower_interfaces {
+  module action {
+    @verbatim (language="comment", text=
+      "OBJECTIF : supervisor_node -> manipulation_node." "\n"
+      "La pose source est piece.pose : centre de l'objet avant la saisie.")
+    struct PickAndPlace_Goal {
+      tower_interfaces::msg::Piece piece;
+
+      @verbatim (language="comment", text=
+        "Pose desiree du CENTRE de l'objet apres la depose." "\n"
+        "Ce n'est pas la pose de la pince : manipulation_node calcule le decalage." "\n"
+        "Le serveur transforme les poses vers son repere de planification avec TF.")
+      geometry_msgs::msg::PoseStamped place_pose;
+    };
+    @verbatim (language="comment", text=
+      "RESULTAT : manipulation_node -> supervisor_node." "\n"
+      "true = sequence executee ; le superviseur doit encore verifier le placement.")
+    struct PickAndPlace_Result {
+      boolean success;
+
+      string message;
+    };
+    module PickAndPlace_Feedback_Constants {
+      const uint8 APPROACHING = 0;
+      const uint8 GRASPING = 1;
+      const uint8 LIFTING = 2;
+      const uint8 TRANSPORTING = 3;
+      const uint8 PLACING = 4;
+      const uint8 RETREATING = 5;
+    };
+    @verbatim (language="comment", text=
+      "PROGRESSION : etape courante de la manipulation.")
+    struct PickAndPlace_Feedback {
+      uint8 stage;
+
+      string detail;
+    };
+  };
+};

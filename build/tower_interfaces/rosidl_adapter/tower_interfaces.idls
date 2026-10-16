@@ -1,0 +1,5 @@
+/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_interfaces/rosidl_adapter/tower_interfaces:msg/Piece.idl
+/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_interfaces/rosidl_adapter/tower_interfaces:msg/PieceArray.idl
+/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_interfaces/rosidl_adapter/tower_interfaces:msg/TowerState.idl
+/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_interfaces/rosidl_adapter/tower_interfaces:srv/SetBuildingEnabled.idl
+/net/netud/s/adazin/Bureau/ros_2_robot/build/tower_interfaces/rosidl_adapter/tower_interfaces:action/PickAndPlace.idl

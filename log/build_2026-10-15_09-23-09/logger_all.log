@@ -1,0 +1,256 @@
+[1.425s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--packages-up-to', 'realsense2_camera'][0m
+[1.425s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=['realsense2_camera'], packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f5077ca15b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f5077d516a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f5077d516a0>>, mixin_verb=('build',))[0m
+[1.706s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[1.785s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[1.785s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[1.785s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[1.785s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[1.842s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[1.925s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/net/netud/s/adazin/Bureau/ros_2_robot'
+[2.014s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.014s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[2.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[2.199s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[2.200s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[2.269s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[2.269s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[2.269s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[2.341s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[2.542s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[2.542s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[2.543s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[2.545s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[2.549s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[2.551s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.551s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[2.561s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[2.584s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.584s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[2.584s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[2.592s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.592s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[2.593s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[2.602s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.603s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[2.603s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[2.611s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[2.611s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[2.618s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[2.619s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[2.619s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[2.620s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[2.628s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[2.628s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[2.638s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[2.646s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[2.647s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[2.655s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extensions ['ignore', 'ignore_ament_install']
+[2.655s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extension 'ignore'
+[2.655s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extension 'ignore_ament_install'
+[2.658s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extensions ['colcon_pkg']
+[2.658s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extension 'colcon_pkg'
+[2.671s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extensions ['colcon_meta']
+[2.671s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extension 'colcon_meta'
+[2.671s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extensions ['ros']
+[2.672s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extension 'ros'
+[2.676s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extensions ['cmake', 'python']
+[2.676s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extension 'cmake'
+[2.676s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extension 'python'
+[2.679s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extensions ['python_setup_py']
+[2.682s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros) by extension 'python_setup_py'
+[2.684s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera) by extensions ['ignore', 'ignore_ament_install']
+[2.684s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera) by extension 'ignore'
+[2.685s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera) by extension 'ignore_ament_install'
+[2.687s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera) by extensions ['colcon_pkg']
+[2.687s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera) by extension 'colcon_pkg'
+[2.687s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera) by extensions ['colcon_meta']
+[2.688s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera) by extension 'colcon_meta'
+[2.689s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera) by extensions ['ros']
+[2.690s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera) by extension 'ros'
+[2.706s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/realsense-ros/realsense2_camera' with type 'ros.ament_cmake' and name 'realsense2_camera'[0m
+[2.719s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera_msgs) by extensions ['ignore', 'ignore_ament_install']
+[2.719s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera_msgs) by extension 'ignore'
+[2.735s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera_msgs) by extension 'ignore_ament_install'
+[2.751s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera_msgs) by extensions ['colcon_pkg']
+[2.752s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera_msgs) by extension 'colcon_pkg'
+[2.754s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera_msgs) by extensions ['colcon_meta']
+[2.755s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera_msgs) by extension 'colcon_meta'
+[2.757s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera_msgs) by extensions ['ros']
+[2.773s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_camera_msgs) by extension 'ros'
+[2.791s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/realsense-ros/realsense2_camera_msgs' with type 'ros.ament_cmake' and name 'realsense2_camera_msgs'[0m
+[2.947s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_description) by extensions ['ignore', 'ignore_ament_install']
+[2.947s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_description) by extension 'ignore'
+[3.043s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_description) by extension 'ignore_ament_install'
+[3.059s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_description) by extensions ['colcon_pkg']
+[3.059s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_description) by extension 'colcon_pkg'
+[3.150s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_description) by extensions ['colcon_meta']
+[3.150s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_description) by extension 'colcon_meta'
+[3.150s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_description) by extensions ['ros']
+[3.150s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_description) by extension 'ros'
+[3.153s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/realsense-ros/realsense2_description' with type 'ros.ament_cmake' and name 'realsense2_description'[0m
+[3.165s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_rgbd_plugin) by extensions ['ignore', 'ignore_ament_install']
+[3.165s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'ignore'
+[3.179s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'ignore_ament_install'
+[3.196s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_rgbd_plugin) by extensions ['colcon_pkg']
+[3.196s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'colcon_pkg'
+[3.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_rgbd_plugin) by extensions ['colcon_meta']
+[3.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'colcon_meta'
+[3.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_rgbd_plugin) by extensions ['ros']
+[3.231s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'ros'
+[3.237s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/realsense2_rgbd_plugin) ignored
+[3.289s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extensions ['ignore', 'ignore_ament_install']
+[3.290s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extension 'ignore'
+[3.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extension 'ignore_ament_install'
+[3.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extensions ['colcon_pkg']
+[3.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extension 'colcon_pkg'
+[3.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extensions ['colcon_meta']
+[3.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extension 'colcon_meta'
+[3.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extensions ['ros']
+[3.492s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extension 'ros'
+[3.598s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extensions ['cmake', 'python']
+[3.599s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extension 'cmake'
+[3.624s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extension 'python'
+[3.625s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extensions ['python_setup_py']
+[3.625s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/res) by extension 'python_setup_py'
+[3.717s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extensions ['ignore', 'ignore_ament_install']
+[3.717s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extension 'ignore'
+[3.718s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extension 'ignore_ament_install'
+[3.761s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extensions ['colcon_pkg']
+[3.761s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extension 'colcon_pkg'
+[3.762s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extensions ['colcon_meta']
+[3.783s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extension 'colcon_meta'
+[3.804s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extensions ['ros']
+[3.819s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extension 'ros'
+[3.872s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extensions ['cmake', 'python']
+[3.872s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extension 'cmake'
+[3.892s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extension 'python'
+[3.907s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extensions ['python_setup_py']
+[3.928s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/realsense-ros/scripts) by extension 'python_setup_py'
+[3.970s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sorting_msgs) by extensions ['ignore', 'ignore_ament_install']
+[3.970s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sorting_msgs) by extension 'ignore'
+[4.010s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sorting_msgs) by extension 'ignore_ament_install'
+[4.135s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sorting_msgs) by extensions ['colcon_pkg']
+[4.135s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sorting_msgs) by extension 'colcon_pkg'
+[4.200s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sorting_msgs) by extensions ['colcon_meta']
+[4.227s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sorting_msgs) by extension 'colcon_meta'
+[4.309s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sorting_msgs) by extensions ['ros']
+[4.370s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sorting_msgs) by extension 'ros'
+[4.495s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/sorting_msgs' with type 'ros.ament_cmake' and name 'sorting_msgs'[0m
+[4.503s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_bringup) by extensions ['ignore', 'ignore_ament_install']
+[4.711s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_bringup) by extension 'ignore'
+[4.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_bringup) by extension 'ignore_ament_install'
+[4.736s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_bringup) by extensions ['colcon_pkg']
+[4.746s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_bringup) by extension 'colcon_pkg'
+[4.748s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_bringup) by extensions ['colcon_meta']
+[4.750s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_bringup) by extension 'colcon_meta'
+[4.750s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_bringup) by extensions ['ros']
+[4.755s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_bringup) by extension 'ros'
+[4.772s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/tower_bringup' with type 'ros.ament_cmake' and name 'sorting'[0m
+[4.773s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_control) by extensions ['ignore', 'ignore_ament_install']
+[4.773s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_control) by extension 'ignore'
+[4.795s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_control) by extension 'ignore_ament_install'
+[4.804s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_control) by extensions ['colcon_pkg']
+[4.804s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_control) by extension 'colcon_pkg'
+[4.829s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_control) by extensions ['colcon_meta']
+[4.829s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_control) by extension 'colcon_meta'
+[4.829s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_control) by extensions ['ros']
+[4.831s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_control) by extension 'ros'
+[4.892s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/tower_control' with type 'ros.ament_cmake' and name 'sorting'[0m
+[4.907s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[4.907s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_interfaces) by extension 'ignore'
+[4.910s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_interfaces) by extension 'ignore_ament_install'
+[4.912s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_interfaces) by extensions ['colcon_pkg']
+[4.912s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_interfaces) by extension 'colcon_pkg'
+[4.927s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_interfaces) by extensions ['colcon_meta']
+[4.927s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_interfaces) by extension 'colcon_meta'
+[4.928s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_interfaces) by extensions ['ros']
+[4.930s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_interfaces) by extension 'ros'
+[4.939s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/tower_interfaces' with type 'ros.ament_cmake' and name 'sorting'[0m
+[4.941s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_perception) by extensions ['ignore', 'ignore_ament_install']
+[4.942s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_perception) by extension 'ignore'
+[4.944s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_perception) by extension 'ignore_ament_install'
+[4.959s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_perception) by extensions ['colcon_pkg']
+[4.959s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_perception) by extension 'colcon_pkg'
+[4.960s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_perception) by extensions ['colcon_meta']
+[4.962s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_perception) by extension 'colcon_meta'
+[4.962s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_perception) by extensions ['ros']
+[4.964s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/tower_perception) by extension 'ros'
+[4.971s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/tower_perception' with type 'ros.ament_cmake' and name 'sorting'[0m
+[4.971s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[4.972s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[4.972s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[4.974s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[4.974s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[5.028s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping package 'sorting' in 'src/tower_perception'
+[5.028s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping package 'sorting' in 'src/tower_interfaces'
+[5.028s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping package 'sorting' in 'src/tower_control'
+[5.028s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping package 'sorting' in 'src/tower_bringup'
+[5.028s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping package 'realsense2_description' in 'src/realsense-ros/realsense2_description'
+[5.030s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping package 'sorting_msgs' in 'src/sorting_msgs'
+[5.030s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[5.032s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[5.037s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 287 installed packages in /opt/ros/jazzy[0m
+[5.040s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[5.132s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera_msgs' build argument 'cmake_args' from command line to 'None'
+[5.132s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera_msgs' build argument 'cmake_target' from command line to 'None'
+[5.133s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.133s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[5.133s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[5.143s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[5.144s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[5.144s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[5.145s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.145s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'realsense2_camera_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/net/netud/s/adazin/Bureau/ros_2_robot/build/realsense2_camera_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs', 'merge_install': False, 'path': '/net/netud/s/adazin/Bureau/ros_2_robot/src/realsense-ros/realsense2_camera_msgs', 'symlink_install': False, 'test_result_base': None}[0m
+[5.159s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera' build argument 'cmake_args' from command line to 'None'
+[5.170s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera' build argument 'cmake_target' from command line to 'None'
+[5.171s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.179s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[5.179s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera' build argument 'cmake_clean_first' from command line to 'False'
+[5.186s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera' build argument 'cmake_force_configure' from command line to 'False'
+[5.187s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera' build argument 'ament_cmake_args' from command line to 'None'
+[5.188s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[5.189s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'realsense2_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.189s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'realsense2_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/net/netud/s/adazin/Bureau/ros_2_robot/build/realsense2_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera', 'merge_install': False, 'path': '/net/netud/s/adazin/Bureau/ros_2_robot/src/realsense-ros/realsense2_camera', 'symlink_install': False, 'test_result_base': None}[0m
+[5.191s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[5.193s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[5.196s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/net/netud/s/adazin/Bureau/ros_2_robot/src/realsense-ros/realsense2_camera_msgs' with build type 'ament_cmake'
+[5.198s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/net/netud/s/adazin/Bureau/ros_2_robot/src/realsense-ros/realsense2_camera_msgs'
+[5.204s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[5.204s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.205s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[5.286s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/net/netud/s/adazin/Bureau/ros_2_robot/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy _=/usr/bin/env /usr/bin/cmake /net/netud/s/adazin/Bureau/ros_2_robot/src/realsense-ros/realsense2_camera_msgs -DCMAKE_INSTALL_PREFIX=/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs[0m
+[12.751s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete was interrupted[0m
+[12.755s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete again[0m
+[12.761s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/net/netud/s/adazin/Bureau/ros_2_robot/build/realsense2_camera_msgs' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy _=/usr/bin/env /usr/bin/cmake /net/netud/s/adazin/Bureau/ros_2_robot/src/realsense-ros/realsense2_camera_msgs -DCMAKE_INSTALL_PREFIX=/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs[0m
+[12.762s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(realsense2_camera_msgs)
+[12.768s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs' for CMake module files
+[12.769s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs' for CMake config files
+[12.769s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs/bin'
+[12.770s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs/lib/pkgconfig/realsense2_camera_msgs.pc'
+[12.770s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs/lib/python3.9/site-packages'
+[12.770s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs/lib64/python3.9/site-packages'
+[12.770s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs/bin'
+[12.771s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.ps1'
+[12.786s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.dsv'
+[12.789s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.sh'
+[12.792s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.bash'
+[12.796s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.zsh'
+[12.799s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/net/netud/s/adazin/Bureau/ros_2_robot/install/realsense2_camera_msgs/share/colcon-core/packages/realsense2_camera_msgs)
+[12.815s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished[0m
+[12.815s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[12.815s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[12.816s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[12.830s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[12.830s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[12.830s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[12.900s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[12.900s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/net/netud/s/adazin/Bureau/ros_2_robot/install/local_setup.ps1'
+[12.906s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/net/netud/s/adazin/Bureau/ros_2_robot/install/_local_setup_util_ps1.py'
+[12.917s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/net/netud/s/adazin/Bureau/ros_2_robot/install/setup.ps1'
+[12.923s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/net/netud/s/adazin/Bureau/ros_2_robot/install/local_setup.sh'
+[12.926s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/net/netud/s/adazin/Bureau/ros_2_robot/install/_local_setup_util_sh.py'
+[12.931s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/net/netud/s/adazin/Bureau/ros_2_robot/install/setup.sh'
+[12.935s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/net/netud/s/adazin/Bureau/ros_2_robot/install/local_setup.bash'
+[12.939s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/net/netud/s/adazin/Bureau/ros_2_robot/install/setup.bash'
+[12.942s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/net/netud/s/adazin/Bureau/ros_2_robot/install/local_setup.zsh'
+[12.946s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/net/netud/s/adazin/Bureau/ros_2_robot/install/setup.zsh'

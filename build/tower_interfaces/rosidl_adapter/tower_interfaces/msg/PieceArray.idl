@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from tower_interfaces/msg/PieceArray.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+#include "tower_interfaces/msg/Piece.idl"
+
+module tower_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "Observation publiee sur /detected_pieces par perception_node." "\n"
+      "Le header permet de dater aussi une observation sans aucune piece.")
+    struct PieceArray {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Toutes les poses utilisent le meme repere et la meme date que header." "\n"
+        "Une liste vide signifie : aucune piece detectee dans cette observation.")
+      sequence<tower_interfaces::msg::Piece> pieces;
+    };
+  };
+};

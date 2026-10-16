@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" disabled="0" errors="0" time="0." timestamp="2026-10-15T10:02:22.916" name="AllTests">
+  <testsuite name="Pieces" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-15T10:02:22.916">
+    <testcase name="PolymorphismAndFixedColors" file="/net/netud/s/adazin/Bureau/ros_2_robot/src/tower_model/test/test_pieces.cpp" line="19" status="run" result="completed" time="0." timestamp="2026-10-15T10:02:22.916" classname="tower_model.Pieces" />
+    <testcase name="RejectInvalidDimensions" file="/net/netud/s/adazin/Bureau/ros_2_robot/src/tower_model/test/test_pieces.cpp" line="37" status="run" result="completed" time="0." timestamp="2026-10-15T10:02:22.916" classname="tower_model.Pieces" />
+    <testcase name="RosConversionPreservesMeasurementsAndUsesDiameter" file="/net/netud/s/adazin/Bureau/ros_2_robot/src/tower_model/test/test_pieces.cpp" line="47" status="run" result="completed" time="0." timestamp="2026-10-15T10:02:22.916" classname="tower_model.Pieces" />
+    <testcase name="ConfidenceBounds" file="/net/netud/s/adazin/Bureau/ros_2_robot/src/tower_model/test/test_pieces.cpp" line="71" status="run" result="completed" time="0." timestamp="2026-10-15T10:02:22.916" classname="tower_model.Pieces" />
+  </testsuite>
+</testsuites>
